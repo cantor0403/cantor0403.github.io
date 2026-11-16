@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>张哲的数学札记</title>
+    <link href="https://cantor0403.github.io/feed.xml" rel="self" />
+    <link href="https://cantor0403.github.io" />
+    <updated>2026-11-16T12:00:00+08:00</updated>
+    <author>
+        <name>张哲</name>
+    </author>
+    <id>https://cantor0403.github.io</id>
+
+    <entry>
+        <title>排版示例：从热方程到能量恒等式</title>
+        <author>
+            <name>张哲</name>
+        </author>
+        <link href="https://cantor0403.github.io/math-typography/"/>
+        <id>https://cantor0403.github.io/math-typography/</id>
+
+        <updated>2026-11-16T12:00:00+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    <p>这是一篇可删除的排版示例，用经典热方程展示行内公式、多行推导、定理框、证明和交叉引用。内容仅用于检验博客的阅读与写作体验。</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+<div class="demo-notice">这是网站的排版示例，并非待发表的研究文章。你可以在 Publii 中编辑、设为草稿或删除它。</div>
+<p>数学文章需要留出推导展开的空间。这篇示例用一个熟悉的能量恒等式，检查中文、英文和数学公式能否自然地出现在同一篇文章中。</p>
+<h2>1. 问题与记号</h2>
+<p>设 \((M,g)\) 是无边界的紧致黎曼流形，取拉普拉斯算子的符号约定 \(\Delta_g=\operatorname{div}_g\nabla\)。考虑光滑解 \(u:M\times[0,T]\to\R\)，满足热方程</p>
+<p>\[
+  \frac{\partial u}{\partial t}=\Delta_g u.
+\]</p>
+<p>我们关心 Dirichlet 能量如何随时间变化：</p>
+<p>\begin{equation}
+  \mathcal{E}(t)=\frac12\int_M |\nabla u(x,t)|_g^2\,\mathrm{d}V_g.
+  \label{eq:energy}
+\end{equation}</p>
+<h2>2. 一个基本恒等式</h2>
+<div class="theorem">
+  <p class="theorem-title">命题 1（能量耗散）</p>
+  <p>在上述假设下，\(\mathcal{E}\) 单调不增，并且</p>
+  <p>\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}t}\mathcal{E}(t)
+    =-\int_M|\Delta_g u|^2\,\mathrm{d}V_g.
+    \label{eq:dissipation}
+  \end{equation}</p>
+</div>
+<div class="proof">
+  <p><strong>证明。</strong> 对 \(\eqref{eq:energy}\) 求导，利用无边界条件进行分部积分，再代入方程：</p>
+  <p>\[
+  \begin{aligned}
+    \frac{\mathrm{d}}{\mathrm{d}t}\mathcal{E}(t)
+    &=\int_M\langle\nabla u,\nabla u_t\rangle_g\,\mathrm{d}V_g\\
+    &=-\int_M(\Delta_g u)u_t\,\mathrm{d}V_g\\
+    &=-\int_M|\Delta_g u|^2\,\mathrm{d}V_g.
+  \end{aligned}
+  \]</p>
+  <p class="qed">\(\square\)</p>
+</div>
+<p>将 \(\eqref{eq:dissipation}\) 在时间区间 \([0,T]\) 上积分，就得到</p>
+<p>\[
+  \mathcal{E}(T)+\int_0^T\!\int_M |u_t|^2\,\mathrm{d}V_g\,\mathrm{d}t
+  =\mathcal{E}(0).
+\]</p>
+<h2>3. 这里可以继续写什么</h2>
+<p>一篇札记可以停在一个明确的问题上。例如，若已知总耗散有限，能直接推出解在每一个时刻的时间导数都趋于零吗？还需要怎样的紧性或正则性信息？</p>
+<blockquote><p>把假设、计算和仍未解决的问题放在一起，方便自己以后回看，也方便读者指出具体的一步。</p></blockquote>
+<h3>矩阵与分段表达式</h3>
+<p>较复杂的表达式也可以直接写在正文中：</p>
+<p>\[
+  A=\begin{pmatrix}a&b\\b&c\end{pmatrix},
+  \qquad
+  \chi(s)=
+  \begin{cases}
+    1,& |s|\leq 1,\\
+    0,& |s|\geq 2.
+  \end{cases}
+\]</p>
+<p>上面的两段仅指定函数在这两个区域的值；中间区域可以选择平滑过渡。</p>
+<h2>4. 写作与阅读</h2>
+<p>右侧会根据小标题自动生成本文目录。手机上，侧栏放在正文后面；宽公式可以横向滚动。使用浏览器的打印功能时，侧栏和导航会自动隐藏。</p>
+<p>公式渲染文件与网站一起保存，阅读此示例无需加载额外的公式 CDN。</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>使用示例：怎样发布一篇数学文章</title>
+        <author>
+            <name>张哲</name>
+        </author>
+        <link href="https://cantor0403.github.io/writing-a-math-post/"/>
+        <id>https://cantor0403.github.io/writing-a-math-post/</id>
+
+        <updated>2026-11-16T11:00:00+08:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    <p>从保存草稿，到预览公式，再到同步发布。这篇可删除的说明介绍正文编辑、PDF 链接、分类和日常备份的基本流程。</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+<div class="demo-notice">这是可删除的使用说明示例。它用于帮助你熟悉编辑流程，不是正式博客文章。</div>
+<h2>1. 写一篇文章</h2>
+<p>在 Publii 中打开 Posts，创建文章。建议先用可视化编辑器（WYSIWYG），输入标题、正文和分类。写到一半可以保存为草稿，预览满意后再发布。</p>
+<p>你可以把研究札记、讲义和随笔分别设成标签；这个模板会把标签作为分类显示在侧栏。</p>
+<h2>2. 插入公式</h2>
+<p>行内公式可以写成 <code>\(E(t)\)</code>，它在正常正文中的效果是 \(E(t)\)。独立成行的公式可以使用 <code>\[...\]</code>。</p>
+<p>下面是可以复制到正文中的公式文本：</p>
+<pre><code>\[
+  \int_0^1 x^2\,\mathrm{d}x=\frac13.
+\]</code></pre>
+<p>代码框里的内容会保留为代码。复制时把内容粘贴到普通段落里，再点击 Preview 查看数学排版。</p>
+<p>模板也支持常见的 <code>$...$</code> 和 <code>$$...$$</code>。为了避免普通金额中的美元符号被当成公式，数学文章优先采用 <code>\(...\)</code> 和 <code>\[...\]</code>。</p>
+<h3>定理框</h3>
+<p>复制另一篇排版示例中的定理框，替换标题和正文即可。也可以在 HTML 模式或 HTML 区块中使用以下结构：</p>
+<pre><code>&lt;div class="theorem"&gt;
+  &lt;p class="theorem-title"&gt;定理 1&lt;/p&gt;
+  &lt;p&gt;在这里写定理陈述与 \(x\in\R\)。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<h2>3. 添加 PDF</h2>
+<p>在 Tools → File Manager 的 media/files 中加入 PDF，然后在文章中添加指向该文件的链接。PDF 也会随网站同步发布。请使用简短的英文文件名，便于引用。</p>
+<p>一篇文章可以先在网页中给出动机、摘要或关键计算，再链接到完整的 PDF。</p>
+<h2>4. 预览与发布</h2>
+<p>保存文章后，先预览。确认标题、公式和链接都正确，再点击 Sync your website。保存到电脑和同步到网站是两个步骤。</p>
+<p>首次同步前，需要在 Server 设置中连接自己的 GitHub Pages。完整步骤见安装包中的中文指南。</p>
+<h2>5. 保留自己的副本</h2>
+<p>Publii 的文章和配置保存在自己的电脑中。Tools → Backups 可以导出完整备份；定期把备份再保存一份到其他位置。</p>
+<p>GitHub 上主要是生成后的网页。电脑里的完整 Publii 备份，才方便换电脑后继续编辑。</p>
+
+            ]]>
+        </content>
+    </entry>
+</feed>
